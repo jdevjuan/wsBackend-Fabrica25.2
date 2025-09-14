@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}Lista do que Fazer :D{% endblock %}</title>
+</head>
+<body style="font-family:Arial; background:#f5f5f5; margin:20px;">
+  <div style="max-width:800px; margin:auto; background:white; padding:20px; border-radius:8px;">
+    <header style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+      <h1 style="margin:0;">Lista do que fazer :D</h1>
+      <nav>
+        {% if user.is_authenticated %}
+          <a href="{% url 'home' %}" style="margin-right:10px;">Home</a>
+          <a href="/logout/">Sair</a>
+        {% else %}
+          <a href="/login/">Entrar</a> | <a href="/signup/">Registrar</a>
+        {% endif %}
+      </nav>
+    </header>
+    {% block content %}{% endblock %}
+  </div>
+</body>
+</html>

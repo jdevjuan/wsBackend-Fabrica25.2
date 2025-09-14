@@ -1,0 +1,21 @@
+{% extends 'app/base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+  <h2>Suas Tarefas</h2>
+  <form method="post" style="margin-bottom:20px;">
+    {% csrf_token %}
+    <input type="text" name="title" placeholder="Nova tarefa" required style="padding:5px; width:70%;">
+    <button type="submit" style="padding:5px 10px;">Adicionar</button>
+  </form>
+  <ul>
+    {% for task in tasks %}
+      <li style="margin-bottom:5px;">
+        {% if task.completed %}<s>{{ task.title }}</s>{% else %}{{ task.title }}{% endif %}
+        [<a href="{% url 'edit_task' task.id %}">Editar</a>] 
+        [<a href="{% url 'delete_task' task.id %}">Excluir</a>]
+      </li>
+    {% empty %}
+      <li>Nenhuma tarefa ainda.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

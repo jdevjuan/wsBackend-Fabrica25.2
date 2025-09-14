@@ -1,0 +1,11 @@
+{% extends 'app/base.html' %}
+{% block title %}Login{% endblock %}
+{% block content %}
+  <h2>Entrar</h2>
+  <form method="post">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="Usuário" required style="padding:5px; width:50%;"><br><br>
+    <input type="password" name="password" placeholder="Senha" required style="padding:5px; width:50%;"><br><br>
+    <button type="submit" style="padding:5px 10px;">Login</button>
+  </form>
+{% endblock %}
