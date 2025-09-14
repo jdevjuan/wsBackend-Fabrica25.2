@@ -5,8 +5,6 @@ Este é um projeto de uma Lista de Tarefas, feito com Django e Django REST Frame
 Aqui você consegue criar sua conta, adicionar tarefas, marcar como concluídas, editar ou excluir.  
 Também tem uma API para manipular tarefas, caso queira usar com outro app ou fazer testes.
 
----
-
 Funcionalidades:
 - Criar conta e fazer login
 - Adicionar, editar e excluir tarefas
@@ -14,7 +12,7 @@ Funcionalidades:
 - Página inicial simples com HTML e CSS
 - API para listar, criar, atualizar e excluir tarefas
 
-## Como rodar o projeto
+Como rodar o projeto:
 
 1. (Clone o repositório:)
 
