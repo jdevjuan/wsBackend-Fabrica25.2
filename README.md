@@ -1,14 +1,13 @@
 # wsBackend-Fabrica25.2
-# Lista de Tarefas (Django)
 
+Lista de Tarefas (Django)
 Este é um projeto de uma Lista de Tarefas, feito com Django e Django REST Framework.  
 Aqui você consegue criar sua conta, adicionar tarefas, marcar como concluídas, editar ou excluir.  
 Também tem uma API para manipular tarefas, caso queira usar com outro app ou fazer testes.
 
 ---
 
-## Funcionalidades
-
+Funcionalidades:
 - Criar conta e fazer login
 - Adicionar, editar e excluir tarefas
 - Marcar tarefas como concluídas
